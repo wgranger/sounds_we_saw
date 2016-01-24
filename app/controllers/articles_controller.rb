@@ -1,56 +1,43 @@
 class ArticlesController < ApplicationController
- before_action :get_playlist
 
-  def get_playlist
-   @plylist = Playlist.find(params[:article_id])
-  end
-
-  def show
-   @article = @article.tweets.find(params[:id])
-  end
-
-  def create
-   @tweet = @zombie.tweets.new(params[:tweet])
-  if @tweet.save
-   redirect_to [@zombie, @tweet]
-  else
-   render action: "new"
+  def get_article
+   @article = Article.find(params[:article_id])
   end
 
   def index
-   @tweets = @zombie.tweets
+   @articles = Article.all 
+  end
+
+  def show
   end
 
   def new
-    @playlist = Playlist.new
+    @article = Article.new
   end
 
   def edit
-    @playlist = Playlist.find(params[:id])
   end
 
   def create
-    @playlist = Playlist.new(playlist_params)
-    if @playlist.save
-      redirect_to playlists_path
+   @article = Article.new(article_params)
+    if @article.save
+     redirect_to article_path
     else
-      redirect_to '/playlist'
+     render action: "new"
     end
   end
 
   def update
-    @playlist = Playlist.find(params[:id])
-    if @playlist.update(playlist_params)
-      redirect_to @playlist
+    if @article.update(article_params)
+      redirect_to @article
     else
       render 'edit'
     end
   end
 
   def destroy
-    @playlist = Playlist.find(params[:id])
-    @playlist.destroy
-    redirect_to playlists_path
+    @article.destroy
+    redirect_to articles_path
   end
 
 end

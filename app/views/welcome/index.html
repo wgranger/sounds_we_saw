@@ -8,10 +8,10 @@
 </head>
 <body>
 
-<%= image_tag 'mixed_tape.png', size: "350x250" %>
+<%= link_to image_tag('mixed_tape.png', size: "350x250", :class => "cassette"), articles_path %>
 
   <a class="waves-effect waves-light btn">Login</a>
-  <a class="waves-effect waves-light btn">Sign Up</a>
+  <a class="waves-effect waves-light btn" href="users/new">Sign Up</a>
 
 </body>
 </html>
