@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :songs
   resources :users, except: :index
 
+  get '/auth/spotify/callback', to: 'users#spotify'
+
   # Example resource route with options:
   #   resources :products do
   #     member do

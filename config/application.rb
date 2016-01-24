@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+RSpotify::authenticate("64295f68bbe24ac7ac3154f6d6a1ee5c", "4255bfa20eae402590843b749a158570")
+
 module SoundsWeSaw
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

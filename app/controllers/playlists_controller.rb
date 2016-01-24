@@ -5,6 +5,8 @@ class PlaylistsController < ApplicationController
   end
 
   def new
+    @user = User.find(session[:user_id])
+    @spotify_user = session[:spotify_user]
     @playlist = Playlist.new
   end
 
