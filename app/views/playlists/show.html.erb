@@ -1,0 +1,10 @@
+<% @playlist.songs.each do |song| %>
+<%= song.title %>
+<% end %>
+
+<h5> Search and Add </h5>
+<%= form_tag new_playlist_song_path do %>
+    <%= label_tag :search %>
+    <%= text_field_tag :search %>
+    <%= submit_tag :search %>
+<% end %>
