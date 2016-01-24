@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SoundsWeSaw</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= link_to image_tag('mixed_tape.png', size: "350x250", :class => "cassette"), articles_path %>
+
+  <a class="waves-effect waves-light btn">Login</a>
+  <a class="waves-effect waves-light btn" href="users/new">Sign Up</a>
+
+</body>
+</html>

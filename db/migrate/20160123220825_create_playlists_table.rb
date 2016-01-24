@@ -1,4 +1,4 @@
-class CreatePlaylists < ActiveRecord::Migration
+class CreatePlaylistsTable < ActiveRecord::Migration
   def change
     create_table :playlists do |t|
       t.string :title
