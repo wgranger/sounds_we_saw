@@ -1,4 +1,5 @@
 <% @music.each do |track| %>
-<%= track  %>
-<% binding.pry %>
+<div>
+<h6><%= track.name  %> <%= track.album.name %> <%= track.album.artists.first.name %></h6>
+</div>
 <% end %>

@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   end
 
   def new
-    @music = RSpotify::Artist.search(params[:search])
+    @music = RSpotify::Track.search(params[:search])
   end
 
 end
