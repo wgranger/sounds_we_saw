@@ -19,3 +19,5 @@
   <%= link_to playlist.title, playlist_songs_path(playlist.id) %>
   <%= button_to "Delete", {:controller => :playlists, :action => 'destroy', :id => playlist.id }, :method => :delete %>
   <% end %>
+ <!--  <%= react_component'NewPlaylist', {titles: @user.playlists.to_json} %>
+ -->

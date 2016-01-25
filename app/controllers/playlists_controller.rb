@@ -15,6 +15,10 @@ class PlaylistsController < ApplicationController
   end
 
   def create
+    if session[:spotify_user]
+      @user = RSpotify::User.new(session[:spotify_user])
+      @user.create_playlist!(playlist_params[:title])
+    end
     @playlist = Playlist.new(playlist_params)
     if @playlist.save
       @playlist.update_attributes(user_id: session[:user_id])
