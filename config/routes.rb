@@ -13,10 +13,18 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :articles
-  resources :playlists
-  resources :songs
+  resources :playlists do
+    shallow do
+      resources :songs
+    end
+  end
+  
   resources :users, except: :index
 
+  get '/auth/spotify/callback', to: 'users#spotify'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   # Example resource route with options:
   #   resources :products do
   #     member do

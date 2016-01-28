@@ -5,6 +5,8 @@ class PlaylistsController < ApplicationController
   end
 
   def new
+    @user = User.find(session[:user_id])
+    @spotify_user = session[:spotify_user]
     @playlist = Playlist.new
   end
 
@@ -13,9 +15,14 @@ class PlaylistsController < ApplicationController
   end
 
   def create
+    if session[:spotify_user]
+      @user = RSpotify::User.new(session[:spotify_user])
+      @user.create_playlist!(playlist_params[:title])
+    end
     @playlist = Playlist.new(playlist_params)
     if @playlist.save
-      redirect_to playlists_path
+      @playlist.update_attributes(user_id: session[:user_id])
+      redirect_to root_path
     else
       redirect_to '/playlist'
     end
@@ -33,12 +40,12 @@ class PlaylistsController < ApplicationController
   def destroy
     @playlist = Playlist.find(params[:id])
     @playlist.destroy
-    redirect_to playlists_path
+    redirect_to root_path
   end
 
   private
   def playlist_params
-    params.require(:user).permit(:title, :songs)
+    params.require(:playlist).permit(:title)
   end
 
 end

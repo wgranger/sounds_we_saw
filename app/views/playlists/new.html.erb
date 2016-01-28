@@ -1,0 +1,23 @@
+
+<%= link_to 'Sign in with Spotify', '/auth/spotify' %>
+
+<%= form_for(@playlist) do |f| %>
+ <div class="row">
+    <form class="col s8">
+      <div class="row">
+        <div class="input-field col s4">
+          <%= f.text_field :title %>
+          <label for="title">Title</label>
+        </div>
+      </div>
+     <%= f.submit %>
+    </form>
+  </div>
+<% end %>
+
+<% @user.playlists.each do |playlist| %>
+  <%= link_to playlist.title, playlist_songs_path(playlist.id) %>
+  <%= button_to "Delete", {:controller => :playlists, :action => 'destroy', :id => playlist.id }, :method => :delete %>
+  <% end %>
+ <!--  <%= react_component'NewPlaylist', {titles: @user.playlists.to_json} %>
+ -->

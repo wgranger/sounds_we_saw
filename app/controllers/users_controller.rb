@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def new
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to articles_path
+      redirect_to @user
     else
       redirect_to '/users/new'
     end
@@ -35,6 +35,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     redirect_to articles_path
+  end
+
+  def spotify
+    spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+    # Now you can access user's private data, create playlists and much more
+    session[:spotify_user] = spotify_user.to_hash
+    redirect_to new_playlist_path
   end
 
   private
