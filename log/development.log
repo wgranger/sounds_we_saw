@@ -31155,3 +31155,593 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
   Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 07:41:35 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (21.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (707.2ms)
+Completed 200 OK in 726ms (Views: 716.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-01-25 07:41:41 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 125ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show" for ::1 at 2016-01-25 07:41:45 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 19ms (ActiveRecord: 2.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/users_controller.rb:4:in `show'
+
+
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.0ms)
+
+
+Started GET "/users/show" for ::1 at 2016-01-25 07:41:45 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/users_controller.rb:4:in `show'
+
+
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 07:41:50 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (85.1ms)
+Completed 200 OK in 86ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-01-25 07:41:51 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-01-25 07:41:56 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WiY3XOhlV05iFEszK+TbxmmymweCVVVDpkBQAOiBY9ZQArj6TiDfhoZGeD7fapBf3SIJGf4J1EVyE6T6mddXrw==", "username"=>"wgranger", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "wgranger"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 84ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2016-01-25 07:41:56 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 93ms (Views: 91.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 07:41:58 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.3ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 148ms (Views: 138.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/auth/spotify" for ::1 at 2016-01-25 07:41:59 -0600
+
+
+Started GET "/auth/spotify" for ::1 at 2016-01-25 07:41:59 -0600
+
+
+Started GET "/auth/spotify/callback?code=AQAHTlcJAF9_De-GeJ4X-2E1QDS9exILps49D5b3k7iahYkAst47p1SqCuFdk1RsZj0-Wr3t-DpAAj4rhn01UzuHHysMwtmRYWEHZj0b9bzIWV8DWEolu-q8m13R4ZsSMyP1Rbbb2r0zGr3409qrW_tjFRUXXNMvX3akwmcw1_7LpNSnKn0-QRPDSOduV_1YPKpD7FzCc4LKta-jubr0WMbRX3Ey_ufb4LS9R7TPToRqdMW7Ixz2AqLoN_t-lgy1-kNq283uAJysbWkqK3aBYQnh&state=11d75a070506c2ce60079ee7e0cd6c90ce2b98266ccef003" for ::1 at 2016-01-25 07:42:12 -0600
+Processing by UsersController#spotify as HTML
+  Parameters: {"code"=>"AQAHTlcJAF9_De-GeJ4X-2E1QDS9exILps49D5b3k7iahYkAst47p1SqCuFdk1RsZj0-Wr3t-DpAAj4rhn01UzuHHysMwtmRYWEHZj0b9bzIWV8DWEolu-q8m13R4ZsSMyP1Rbbb2r0zGr3409qrW_tjFRUXXNMvX3akwmcw1_7LpNSnKn0-QRPDSOduV_1YPKpD7FzCc4LKta-jubr0WMbRX3Ey_ufb4LS9R7TPToRqdMW7Ixz2AqLoN_t-lgy1-kNq283uAJysbWkqK3aBYQnh", "state"=>"11d75a070506c2ce60079ee7e0cd6c90ce2b98266ccef003"}
+Redirected to http://localhost:3000/playlists/new
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 07:42:13 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/playlists" for ::1 at 2016-01-25 07:42:21 -0600
+Processing by PlaylistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j9BruSzFzxFF/lBjT7Ng41mAFwTulFlTyJZYjtilH0aF9OQfioBH2aGsY267PSt67RCFGpLI2FUcxax0qfMrPw==", "playlist"=>{"title"=>"Test"}, "commit"=>"Create Playlist"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (23.8ms)[0m  [1mINSERT INTO "playlists" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Test"], ["created_at", "2016-01-25 13:42:21.876470"], ["updated_at", "2016-01-25 13:42:21.876470"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "playlists" SET "user_id" = $1, "updated_at" = $2 WHERE "playlists"."id" = $3  [["user_id", 1], ["updated_at", "2016-01-25 13:42:21.903988"], ["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 512ms (ActiveRecord: 25.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 07:42:21 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (102.5ms)
+Completed 200 OK in 104ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-01-25 07:42:28 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 85ms (Views: 84.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 07:42:29 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 77ms (Views: 75.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/playlists/4/songs" for ::1 at 2016-01-25 07:42:32 -0600
+Processing by SongsController#index as HTML
+  Parameters: {"playlist_id"=>"4"}
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" INNER JOIN "tracklists" ON "songs"."id" = "tracklists"."song_id" WHERE "tracklists"."playlist_id" = $1[0m  [["playlist_id", 4]]
+  Rendered songs/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 158ms (Views: 154.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/playlists/4/songs/new?utf8=%E2%9C%93&search=Dance+with+somebody&commit=search" for ::1 at 2016-01-25 07:42:45 -0600
+Processing by SongsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dance with somebody", "commit"=>"search", "playlist_id"=>"4"}
+  Rendered songs/new.html.erb within layouts/application (6012.0ms)
+Completed 200 OK in 6600ms (Views: 6205.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for ::1 at 2016-01-25 07:44:18 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 07:44:18 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (95.5ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-01-25 07:44:20 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 07:44:40 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (91.9ms)
+Completed 200 OK in 93ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-01-25 07:44:43 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:11:52 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (464.3ms)
+Completed 200 OK in 483ms (Views: 473.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-01-25 09:12:51 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 138ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show" for ::1 at 2016-01-25 09:12:52 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 19ms (ActiveRecord: 2.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/users_controller.rb:4:in `show'
+
+
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.8ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.7ms)
+
+
+Started GET "/users/show" for ::1 at 2016-01-25 09:12:53 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/users_controller.rb:4:in `show'
+
+
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/willgranger/.rbenv/versions/2.1.7/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:12:55 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (110.6ms)
+Completed 200 OK in 113ms (Views: 112.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:12:56 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (118.2ms)
+Completed 200 OK in 120ms (Views: 119.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize.self-64807c4e0b3f8190589b82469d74d02302ce732019200583c9417351b20dac06.css?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/development/react.self-7b6d4d9bb038202df4841a80039cfea3df922576794ef968c155bf58c702c25a.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/initial.self-5fc251c38da473321319aa59154bbaf8d6a0e5dd635dcb3e4de6f70af7ef6f5c.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/general.self-31efe75501386166e9d36d9cb06d1164601a253a453018141393aa631c43c20b.css?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/collapsible.self-28e651bb34f045977f525ed2f35a22955e549b9e783851dba0b75b480c75abb2.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/leanModal.self-4db1374f875e0a1a2ba3389d23cae8f6f0c2672e7e69aeab7645ed51d26e6915.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/materialbox.self-6c6b2ba48598681c90551b540338699c75cf2f9ada34cc4b22570c217b9292d8.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/dropdown.self-a1ff4400a417f25698cc5cc70e36e273953beaf52226d09b3795ce3edc473a66.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/tabs.self-922f8a5ef8f7381c945259a9f1dcaf6d628630cda8fcbbfe182ea653091b165c.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/sideNav.self-d1aa0f50b6f5d0d9a7086344d806fc133274dd021e58f837cbe39e309012045b.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/scrollspy.self-9bd8d701ac90c813a0d051ab4943150bdb536d863646d8b349c42a88edb31cf8.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/forms.self-95e85e335577e28202a4b4034a754320f866221010ed4a0be2cbf6af0dd79f1d.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/slider.self-8052f7188f9e8ab3d03b246d4942a4824edb9614d0d130051d11ba1354c9c798.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/pushpin.self-3e487290a48f23142c992c158b45cbd0be9c83de7c23abbb33b195954d1883cd.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/scrollFire.self-d38b34eac05d33baa79181ef5ba72c67b7f73714ff11cda22495d30f4469298f.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/date_picker/picker.self-f7869dc9881d3874917e009ea6e30d68817b1bd1247665fb653e0f87393fb60f.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/character_counter.self-f3a78940ad5b851c1b7b79d86a5d5d9bdf0dc15e0e58e2a58b3eb57d845fbd37.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/new_playlist.self-f44aa2f861d9eac584240c3e4ad7b913e508fa515b87f7c60433889a82751095.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/title_view.self-7c3feaf941f98a859acd9a40b1469c78ccda233550b15199af6ddc745d3b33a3.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/mixed_tape-99f95b9e64e43d9976fafdc2f16105738220c6ae7972ae177f30c6f04066ae43.png" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/assets/roboto/Roboto-Regular-b5c9c23bd12593523a46d79dd0aee80e3226bbde4c9ac05fc30a95e2c1510de0.woff2" for ::1 at 2016-01-25 09:12:56 -0600
+
+
+Started GET "/articles" for ::1 at 2016-01-25 09:14:02 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:14:10 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (100.8ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-01-25 09:14:11 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-01-25 09:14:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dflQHXgdBgXAeOQEILr/KUCuLJySgV+fvexrXliYhRZ/3d+73liOzSQq1wnUNLSw9D6+gu7d3plpv5+kKc6xbw==", "username"=>"wgranger", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "wgranger"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 81ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2016-01-25 09:14:18 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 175ms (Views: 173.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 09:14:21 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.5ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 147ms (Views: 138.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/auth/spotify" for ::1 at 2016-01-25 09:14:22 -0600
+
+
+Started GET "/auth/spotify" for ::1 at 2016-01-25 09:14:23 -0600
+
+
+Started GET "/auth/spotify/callback?code=AQAxJqdPSxqQRqzIZEffrN5RrxE8ymvIJxbv4C4_H_1v-qjltlRU0dbAHrwi7aM_fDpNtOYqcq1yCm4Ck8QqaVtu07oRw8oLykRUHl3W_YElsSwJ4qkS1YooT50Hti1NuicCflZQjkrRX0mVDc_Miw3IjxE-88Sjt-ZmeCsNFQ0BaM0_6q0RqmrmHWdjE5dmAIGDk3x3As5ZWxUfIDwbUbIvnHW3ZeAYwC6DQfB_K3sfmDF9vg0x0tglaRNm3E1Qq6Bdb8yNM_eYBXbiEfT3-5Ma&state=ad6cdedb2b24f215200bd05e9489eaf9cc397d50e7b6a599" for ::1 at 2016-01-25 09:14:34 -0600
+Processing by UsersController#spotify as HTML
+  Parameters: {"code"=>"AQAxJqdPSxqQRqzIZEffrN5RrxE8ymvIJxbv4C4_H_1v-qjltlRU0dbAHrwi7aM_fDpNtOYqcq1yCm4Ck8QqaVtu07oRw8oLykRUHl3W_YElsSwJ4qkS1YooT50Hti1NuicCflZQjkrRX0mVDc_Miw3IjxE-88Sjt-ZmeCsNFQ0BaM0_6q0RqmrmHWdjE5dmAIGDk3x3As5ZWxUfIDwbUbIvnHW3ZeAYwC6DQfB_K3sfmDF9vg0x0tglaRNm3E1Qq6Bdb8yNM_eYBXbiEfT3-5Ma", "state"=>"ad6cdedb2b24f215200bd05e9489eaf9cc397d50e7b6a599"}
+Redirected to http://localhost:3000/playlists/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 09:14:36 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/playlists" for ::1 at 2016-01-25 09:14:44 -0600
+Processing by PlaylistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZzhQ4gDD+4oFf0w07hswVErAzO/SIxAuqUWWOkHDjXFtHN9EpoZzQuEtfzkalXvN/lBe8a5/kSh9FmLAMJW5CA==", "playlist"=>{"title"=>"Hey Playlist thing"}, "commit"=>"Create Playlist"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Hey Playlist thing"], ["created_at", "2016-01-25 15:14:45.706762"], ["updated_at", "2016-01-25 15:14:45.706762"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "playlists" SET "user_id" = $1, "updated_at" = $2 WHERE "playlists"."id" = $3  [["user_id", 1], ["updated_at", "2016-01-25 15:14:45.715871"], ["id", 5]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 849ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:14:45 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (111.1ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-01-25 09:14:48 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 146ms (Views: 145.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 09:14:49 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.3ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 104ms (Views: 102.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/playlists/5/songs" for ::1 at 2016-01-25 09:15:08 -0600
+Processing by SongsController#index as HTML
+  Parameters: {"playlist_id"=>"5"}
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs" INNER JOIN "tracklists" ON "songs"."id" = "tracklists"."song_id" WHERE "tracklists"."playlist_id" = $1[0m  [["playlist_id", 5]]
+  Rendered songs/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 129ms (Views: 124.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/playlists/5/songs/new?utf8=%E2%9C%93&search=girl+from+ipanema&commit=search" for ::1 at 2016-01-25 09:15:17 -0600
+Processing by SongsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"girl from ipanema", "commit"=>"search", "playlist_id"=>"5"}
+  Rendered songs/new.html.erb within layouts/application (11090.1ms)
+Completed 200 OK in 12179ms (Views: 11214.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 09:16:24 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 177ms (Views: 175.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists/5/songs" for ::1 at 2016-01-25 09:20:26 -0600
+Processing by SongsController#index as HTML
+  Parameters: {"playlist_id"=>"5"}
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs" INNER JOIN "tracklists" ON "songs"."id" = "tracklists"."song_id" WHERE "tracklists"."playlist_id" = $1[0m  [["playlist_id", 5]]
+  Rendered songs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 92ms (Views: 90.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 09:20:28 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/playlists/5" for ::1 at 2016-01-25 09:20:29 -0600
+Processing by PlaylistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7gZ2bNkym/bwMW+rcGP/LUpROgj3s/VAq9Qj1q+K2VLkIvnKf3cTPhRjXKaE7bS0/sGoFovvdEZ/h9cs3tztKw==", "id"=>"5"}
+  [1m[35mPlaylist Load (0.3ms)[0m  SELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "playlists" WHERE "playlists"."id" = $1  [["id", 5]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:20:29 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (98.0ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2016-01-25 09:20:31 -0600
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for ::1 at 2016-01-25 09:20:33 -0600
+Processing by PlaylistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered playlists/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/playlists/4" for ::1 at 2016-01-25 09:20:36 -0600
+Processing by PlaylistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6aW/zz6OHkKiN3BDURuWIE4RwWXZa7aqz6BT6cmqSf3jgTBpmMuWikZlQ06lld25+oFTe6U3N6wb86cTuPx9hA==", "id"=>"4"}
+  [1m[35mPlaylist Load (0.3ms)[0m  SELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "playlists" WHERE "playlists"."id" = $1  [["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 09:20:36 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html (122.2ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.0ms)
